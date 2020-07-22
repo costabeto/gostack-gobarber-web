@@ -1,17 +1,16 @@
 import React from 'react';
 import GlobalStyle from './styles/global';
 import SignIn from './pages/SignIn';
-import ToastContainer from './components/ToastContainer';
 
-import { AuthProvider } from './hooks/AuthContext';
+import AppProvider from './hooks';
 
 // eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
 const App = () => (
   <>
-    <AuthProvider>
+    <AppProvider>
       <SignIn />
-    </AuthProvider>
-    <ToastContainer />
+    </AppProvider>
+
     <GlobalStyle />
   </>
 );
